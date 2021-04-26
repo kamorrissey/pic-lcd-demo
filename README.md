@@ -9,5 +9,9 @@ The PIC LCD module in some PICs also provides a regulated charge pump that can b
 The regulated charge pump is both step-up and step-down.
 
 This project demonstrates a minimal circuit and software driving a 3V, multiplexed, 12-pin, LCD segment display (Lumex LCD-S401M16KR)
-with a 28-pin DIP PIC16LF19156 MCU. The demonstration hardware can be breadboarded. A KiCad project for the hardware is included.
-The demonstration software is in C, using the Microchip MPLAB IDE. The MPLAB project is included.
+with a 28-pin DIP PIC16LF19156 MCU operating at 1.8-3.6V.
+The PIC's internal charge pump is used.
+The demonstration hardware can be breadboarded.
+A KiCad project for the hardware is included.
+The demonstration software is in C, using the Microchip MPLAB IDE.
+The MPLAB project is included.
