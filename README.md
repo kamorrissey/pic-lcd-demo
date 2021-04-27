@@ -1,4 +1,7 @@
 # pic-lcd-demo
+
+(This project is still being set up. Don't count on anything in it yet.)
+
 Demonstration of driving a multiplexed LCD segment display using the LCD module of a PIC16LF19156 MCU.
 
 # Introduction
