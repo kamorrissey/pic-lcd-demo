@@ -1,0 +1,411 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr USLetter 11000 8500
+encoding utf-8
+Sheet 1 1
+Title "PIC LCD Module Demo"
+Date "2021-04-25"
+Rev "REV0"
+Comp "Karen A Morrissey"
+Comment1 "A minimal circuit for driving a 1/4 multiplexed segment LCD with charge pump"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L LCD_Demo-rescue:PIC16LF19156-I_SP-PIC16LF19156-I_SP IC1
+U 1 1 608782B5
+P 4000 3700
+F 0 "IC1" H 5200 3965 50  0000 C CNN
+F 1 "PIC16LF19156-I_SP" H 5200 3874 50  0000 C CNN
+F 2 "PIC16LF19156-I_SP:DIP794W56P254L3486H508Q28N" H 6250 3800 50  0001 L CNN
+F 3 "https://componentsearchengine.com/Datasheets/1/PIC16LF19156-I_SP.pdf" H 6250 3700 50  0001 L CNN
+F 4 "8-bit Microcontrollers - MCU 28KB Flash, 2KB RAM, 256KB EE, LCD, 12-bit ADC2, DAC, LP COMP, PWM, CCP, CWG, SMT, ZCD, PPS, RTCC, HLT, WWDT, PMD" H 6250 3600 50  0001 L CNN "Description"
+F 5 "5.08" H 6250 3500 50  0001 L CNN "Height"
+F 6 "Microchip" H 6250 3400 50  0001 L CNN "Manufacturer_Name"
+F 7 "PIC16LF19156-I/SP" H 6250 3300 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "579-PIC16LF19156-ISP" H 6250 3200 50  0001 L CNN "Mouser Part Number"
+F 9 "https://www.mouser.com/Search/Refine.aspx?Keyword=579-PIC16LF19156-ISP" H 6250 3100 50  0001 L CNN "Mouser Price/Stock"
+F 10 "PIC16LF19156-I/SP" H 6250 3000 50  0001 L CNN "Arrow Part Number"
+F 11 "https://www.arrow.com/en/products/pic16lf19156-isp/microchip-technology" H 6250 2900 50  0001 L CNN "Arrow Price/Stock"
+	1    4000 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L LCD_Demo-rescue:LCD-S401M16KR-LCD-S401M16KR LCD1
+U 1 1 6087AB32
+P 4000 2050
+F 0 "LCD1" H 6433 1691 50  0000 L CNN
+F 1 "LCD-S401M16KR" H 6433 1600 50  0000 L CNN
+F 2 "LCD-S401M16KR:LCD-S401M16KR" H 4000 2050 50  0001 L BNN
+F 3 "" H 4000 2050 50  0001 L BNN
+F 4 "Lumex" H 4000 2050 50  0001 C CNN "Manufacturer_Name"
+F 5 "LCD-S401M16KR" H 4000 2050 50  0001 C CNN "Manufacturer_Part_Number"
+	1    4000 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x06_Male J1
+U 1 1 6087F0CC
+P 2600 3700
+F 0 "J1" H 2708 4081 50  0000 C CNN
+F 1 "ICSP" H 2708 3990 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 2600 3700 50  0001 C CNN
+F 3 "~" H 2600 3700 50  0001 C CNN
+	1    2600 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 6087F77C
+P 8250 4650
+F 0 "C1" H 8365 4696 50  0000 L CNN
+F 1 "100nF" H 8365 4605 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 8288 4500 50  0001 C CNN
+F 3 "~" H 8250 4650 50  0001 C CNN
+	1    8250 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 6087FCFA
+P 3300 4800
+F 0 "D1" H 3293 5017 50  0000 C CNN
+F 1 "LED" H 3293 4926 50  0000 C CNN
+F 2 "LED_THT:LED_D5.0mm" H 3300 4800 50  0001 C CNN
+F 3 "~" H 3300 4800 50  0001 C CNN
+	1    3300 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 608808E6
+P 2900 5150
+F 0 "R1" H 2970 5196 50  0000 L CNN
+F 1 "330R" H 2970 5105 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 2830 5150 50  0001 C CNN
+F 3 "~" H 2900 5150 50  0001 C CNN
+	1    2900 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 60882FBD
+P 2900 5300
+F 0 "#PWR0101" H 2900 5050 50  0001 C CNN
+F 1 "GND" H 2905 5127 50  0000 C CNN
+F 2 "" H 2900 5300 50  0001 C CNN
+F 3 "" H 2900 5300 50  0001 C CNN
+	1    2900 5300
+	1    0    0    -1  
+$EndComp
+Text Label 2800 3500 0    50   ~ 0
+ICSP_VPP
+$Comp
+L power:GND #PWR0102
+U 1 1 60884626
+P 3350 3800
+F 0 "#PWR0102" H 3350 3550 50  0001 C CNN
+F 1 "GND" H 3355 3627 50  0000 C CNN
+F 2 "" H 3350 3800 50  0001 C CNN
+F 3 "" H 3350 3800 50  0001 C CNN
+	1    3350 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V0 #PWR0103
+U 1 1 6088485B
+P 3350 3500
+F 0 "#PWR0103" H 3350 3350 50  0001 C CNN
+F 1 "+3V0" H 3365 3673 50  0000 C CNN
+F 2 "" H 3350 3500 50  0001 C CNN
+F 3 "" H 3350 3500 50  0001 C CNN
+	1    3350 3500
+	1    0    0    -1  
+$EndComp
+NoConn ~ 2800 4000
+Wire Wire Line
+	4000 4800 3450 4800
+Wire Wire Line
+	3150 4800 2900 4800
+Text Label 4100 2850 3    50   ~ 0
+LCD_C0
+Text Label 4300 2850 3    50   ~ 0
+LCD_C1
+Text Label 4500 2850 3    50   ~ 0
+LCD_C2
+Text Label 4700 2850 3    50   ~ 0
+LCD_C3
+Text Label 4900 2850 3    50   ~ 0
+LCD_S0
+Text Label 5100 2850 3    50   ~ 0
+LCD_S1
+Text Label 5300 2850 3    50   ~ 0
+LCD_S2
+Text Label 5500 2850 3    50   ~ 0
+LCD_S3
+Text Label 5700 2850 3    50   ~ 0
+LCD_S4
+Text Label 5900 2850 3    50   ~ 0
+LCD_S5
+Text Label 6100 2850 3    50   ~ 0
+LCD_S6
+Text Label 6300 2850 3    50   ~ 0
+LCD_S7
+Wire Wire Line
+	2800 3600 3350 3600
+Wire Wire Line
+	2800 3700 3350 3700
+Text Label 6400 3700 0    50   ~ 0
+ICSP_DAT
+Text Label 6400 3800 0    50   ~ 0
+ICSP_CLK
+Text Label 6400 4300 0    50   ~ 0
+LCD_S6
+Text Label 6400 4400 0    50   ~ 0
+LCD_S7
+Text Label 4000 3700 2    50   ~ 0
+ICSP_VPP
+Text Label 4000 3800 2    50   ~ 0
+LCD_S5
+Text Label 4000 3900 2    50   ~ 0
+LCD_S4
+Text Label 4000 4000 2    50   ~ 0
+LCD_S3
+Text Label 4000 4100 2    50   ~ 0
+LCD_S2
+Text Label 4000 4200 2    50   ~ 0
+LCD_C3
+Text Label 4000 4900 2    50   ~ 0
+LCD_C2
+Text Label 6400 4000 0    50   ~ 0
+LCD_C0
+Text Label 6400 3900 0    50   ~ 0
+LCD_C1
+$Comp
+L power:+3V0 #PWR0104
+U 1 1 608895FE
+P 8500 4400
+F 0 "#PWR0104" H 8500 4250 50  0001 C CNN
+F 1 "+3V0" H 8515 4573 50  0000 C CNN
+F 2 "" H 8500 4400 50  0001 C CNN
+F 3 "" H 8500 4400 50  0001 C CNN
+	1    8500 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 6088985E
+P 8500 5000
+F 0 "#PWR0105" H 8500 4750 50  0001 C CNN
+F 1 "GND" H 8505 4827 50  0000 C CNN
+F 2 "" H 8500 5000 50  0001 C CNN
+F 3 "" H 8500 5000 50  0001 C CNN
+	1    8500 5000
+	1    0    0    -1  
+$EndComp
+Text Label 2800 3800 0    50   ~ 0
+ICSP_DAT
+Text Label 2800 3900 0    50   ~ 0
+ICSP_CLK
+NoConn ~ 4000 4300
+NoConn ~ 4000 4700
+NoConn ~ 4000 5000
+NoConn ~ 6400 5000
+$Comp
+L Device:Battery BT1
+U 1 1 6088C707
+P 7500 3450
+F 0 "BT1" H 7608 3496 50  0000 L CNN
+F 1 "3V" H 7608 3405 50  0000 L CNN
+F 2 "Connector_Wire:SolderWire-0.1sqmm_1x02_P3.6mm_D0.4mm_OD1mm" V 7500 3510 50  0001 C CNN
+F 3 "~" V 7500 3510 50  0001 C CNN
+	1    7500 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V0 #PWR01
+U 1 1 6088D6F4
+P 7500 3250
+F 0 "#PWR01" H 7500 3100 50  0001 C CNN
+F 1 "+3V0" H 7515 3423 50  0000 C CNN
+F 2 "" H 7500 3250 50  0001 C CNN
+F 3 "" H 7500 3250 50  0001 C CNN
+	1    7500 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 6088DCF5
+P 7500 3650
+F 0 "#PWR02" H 7500 3400 50  0001 C CNN
+F 1 "GND" H 7505 3477 50  0000 C CNN
+F 2 "" H 7500 3650 50  0001 C CNN
+F 3 "" H 7500 3650 50  0001 C CNN
+	1    7500 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG01
+U 1 1 6088DFDE
+P 7500 3250
+F 0 "#FLG01" H 7500 3325 50  0001 C CNN
+F 1 "PWR_FLAG" V 7500 3378 50  0000 L CNN
+F 2 "" H 7500 3250 50  0001 C CNN
+F 3 "~" H 7500 3250 50  0001 C CNN
+	1    7500 3250
+	0    1    1    0   
+$EndComp
+Connection ~ 7500 3250
+$Comp
+L power:PWR_FLAG #FLG02
+U 1 1 6088E2A7
+P 7500 3650
+F 0 "#FLG02" H 7500 3725 50  0001 C CNN
+F 1 "PWR_FLAG" V 7500 3778 50  0000 L CNN
+F 2 "" H 7500 3650 50  0001 C CNN
+F 3 "~" H 7500 3650 50  0001 C CNN
+	1    7500 3650
+	0    1    1    0   
+$EndComp
+Connection ~ 7500 3650
+Text Label 4000 4500 2    50   ~ 0
+LCD_S1
+Text Label 4000 4600 2    50   ~ 0
+LCD_S0
+Wire Wire Line
+	8250 4500 8500 4500
+Wire Wire Line
+	8500 4500 8500 4400
+Wire Wire Line
+	8250 4800 8500 4800
+Wire Wire Line
+	8500 4800 8500 5000
+Wire Wire Line
+	2650 4400 4000 4400
+Wire Wire Line
+	3350 3600 3350 3500
+Wire Wire Line
+	3350 3700 3350 3800
+$Comp
+L Device:C C2
+U 1 1 608649D5
+P 6600 5300
+F 0 "C2" H 6715 5346 50  0000 L CNN
+F 1 "0.27uF" H 6715 5255 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 6638 5150 50  0001 C CNN
+F 3 "~" H 6600 5300 50  0001 C CNN
+	1    6600 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 60865017
+P 7100 5300
+F 0 "C3" H 7215 5346 50  0000 L CNN
+F 1 "0.27uF" H 7215 5255 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 7138 5150 50  0001 C CNN
+F 3 "~" H 7100 5300 50  0001 C CNN
+	1    7100 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C4
+U 1 1 608652E1
+P 7600 5300
+F 0 "C4" H 7715 5346 50  0000 L CNN
+F 1 "0.27uF" H 7715 5255 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 7638 5150 50  0001 C CNN
+F 3 "~" H 7600 5300 50  0001 C CNN
+	1    7600 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C5
+U 1 1 608655BD
+P 7100 4250
+F 0 "C5" H 7215 4296 50  0000 L CNN
+F 1 "1uF" H 7215 4205 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 7138 4100 50  0001 C CNN
+F 3 "~" H 7100 4250 50  0001 C CNN
+	1    7100 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 4100 7100 4100
+Wire Wire Line
+	6400 4200 6900 4200
+Wire Wire Line
+	6900 4200 6900 4400
+Wire Wire Line
+	6900 4400 7100 4400
+Wire Wire Line
+	6400 4900 6600 4900
+Wire Wire Line
+	6600 4900 6600 5150
+Wire Wire Line
+	6400 4800 7100 4800
+Wire Wire Line
+	7100 4800 7100 5150
+Wire Wire Line
+	6400 4700 7600 4700
+Wire Wire Line
+	7600 4700 7600 5150
+Wire Wire Line
+	7700 4600 7700 4800
+Wire Wire Line
+	7700 4800 8000 4800
+Wire Wire Line
+	6400 4600 7700 4600
+$Comp
+L power:GND #PWR03
+U 1 1 60867753
+P 6600 5450
+F 0 "#PWR03" H 6600 5200 50  0001 C CNN
+F 1 "GND" H 6605 5277 50  0000 C CNN
+F 2 "" H 6600 5450 50  0001 C CNN
+F 3 "" H 6600 5450 50  0001 C CNN
+	1    6600 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 60867A4B
+P 7100 5450
+F 0 "#PWR04" H 7100 5200 50  0001 C CNN
+F 1 "GND" H 7105 5277 50  0000 C CNN
+F 2 "" H 7100 5450 50  0001 C CNN
+F 3 "" H 7100 5450 50  0001 C CNN
+	1    7100 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 60867D4F
+P 7600 5450
+F 0 "#PWR05" H 7600 5200 50  0001 C CNN
+F 1 "GND" H 7605 5277 50  0000 C CNN
+F 2 "" H 7600 5450 50  0001 C CNN
+F 3 "" H 7600 5450 50  0001 C CNN
+	1    7600 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2650 5900 8000 5900
+Wire Wire Line
+	8000 5900 8000 4800
+Wire Wire Line
+	2650 4400 2650 5900
+Connection ~ 8000 4800
+Wire Wire Line
+	6400 4500 8250 4500
+Connection ~ 8250 4500
+Wire Wire Line
+	8000 4800 8250 4800
+Connection ~ 8250 4800
+Text Notes 3250 5450 0    50   ~ 0
+Optional LED to demonstrate\nthat firmware is running\neven if LCD doesn't display
+Wire Wire Line
+	2900 4800 2900 5000
+$EndSCHEMATC

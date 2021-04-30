@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name LCD_Demo-rescue)(type Legacy)(uri ${KIPRJMOD}/LCD_Demo-rescue.lib)(options "")(descr ""))
+)

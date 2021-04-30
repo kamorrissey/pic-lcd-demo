@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name LCD_Test_Generator-rescue)(type Legacy)(uri ${KIPRJMOD}/LCD_Test_Generator-rescue.lib)(options "")(descr ""))
+)
