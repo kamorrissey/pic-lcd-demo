@@ -6,7 +6,15 @@ Demonstration of driving a multiplexed LCD segment display using the LCD module 
 
 # Introduction
 
-In 2020, I helped a non-profit design a non-contact IR fever thermometer. Several design proposals were submitted. Mine, which was not selected, had two characteristics making it different from the others. I specified a PIC MCU and an LCD display; the others specified Arduino campatible MCUs and LCD displays. I picked an LCD for low power consumption and high visibility in good to bright lighting, such as at a business. I decided to build a working prototype of my design, and this project was a stepping stone to getting there. I decided to document this stepping stone because I could find precious little on the internet about programming the Microchip built-in LCD segment driver module.
+In 2020, I helped a non-profit design a non-contact IR fever thermometer,
+the kind where you point it at a forehead and press a button or pull a trigger.
+Several design proposals were submitted.
+Mine, which was not selected, had two characteristics making it different from the others.
+I specified a PIC MCU and an LCD display; the others specified Arduino campatible MCUs and LED displays.
+I picked an LCD for low power consumption and high visibility in normal to bright lighting, such as at a business.
+I decided to build a working prototype of my design,
+and this project was a stepping stone to getting there.
+I decided to document this stepping stone because I could find precious little on the internet about programming the Microchip built-in LCD segment driver module.
 
 LCD segment displays are much more complicated to drive than LED displays,
 because LCDs are driven by AC signals only.
@@ -18,6 +26,10 @@ The regulated charge pump is both step-up and step-down.
 This project demonstrates a minimal circuit and software driving a 3V, multiplexed, 12-pin, LCD segment display (Lumex LCD-S401M16KR)
 with a 28-pin DIP Microchip PIC16LF19156 MCU operating at 1.8-3.6V.
 
+There are two separate but related circuit boards in the project
+* A poor-person's 3V square wave generator to use for testing LCD segment displays
+* A circuit and firmware to blink all the segments of display
+
 # Hardware
 
 I chose a PICLF19156 for several reasons. It is a 28-pin DIP suitable for breadboarding and hand soldering. It is both narrower and smaller than the 40-pin DIP PIC16F19176 that I originally considered. The LF chips are lower-power than the F chips, with the PIC16LF19156 operating at 1.8-3.6V while able to provide a steady 3V bias for the LCD via the built-in charge pump.
@@ -26,10 +38,12 @@ The hardware design in as minimal as I could make it. The MCUs internal oscillat
 
 The circuit includes a 6-pin header for programming in circuit with a PIC ICSP programmer. I used a Pickit 4. There may be cheaper alternatives.
 
-A KiCad project for the hardware is included.
+KiCad projects for the circuits are provided.
 
 # Software 
 
-The demonstration software is in C, using the free Microchip MPLAB IDE.
-The MPLAB project is included.
+The software for both circuits is in C, using the free Microchip MPLAB X IDE and XC8 compiler.
+I flashed my software using the PicKit 4 programmer and debugger.
+There may be cheaper alternatives, but I'm too new to PICs to recommend anything other than the PicKit 4.
 
+MPLAB X projects for the software are provided.
