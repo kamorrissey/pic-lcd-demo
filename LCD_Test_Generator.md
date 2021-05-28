@@ -42,11 +42,27 @@ Each of the two test generator circuits provided here uses a different PIC MCU:
 * PICLF19156, which was selected for the original thermometer project, and will be used for the LCD module demonstration
 * PIC12F1572, which is only 8-pin, cheaper than the PIC above, and can operate between 2.4V and 5.5
 
-The firmware is trivial: a loop of the following:
-1. turn pin A on, pin B off
-2. delay 2 milliseconds
-3. turn pin A off, pin B on
-4. delay 4 milliseconds
+The firmware is trivial. All initialization code is generated. The main function is:
+```C
+void main(void)
+{
+    // initialize the device
+    SYSTEM_Initialize();
+
+    while (1)
+    {
+        // Generate two complementary 250Hz DC square waves
+        SIGOUTA_SetHigh();
+        SIGOUTB_SetLow();
+        __delay_ms(2);
+        SIGOUTA_SetLow();
+        SIGOUTB_SetHigh();
+        __delay_ms(2);
+    }
+}
+```
+
+`SIGOUTA` and `SIGOUTB` are aliases for the specific MCU pins being used.
 
 This yields two complementary DC square waves varying between approximately ground and Vdd,
 each with a period of about 4ms,
