@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name KAM_Custom)(type Legacy)(uri ${KIPRJMOD}/KAM_Custom.lib)(options "")(descr ""))
+)

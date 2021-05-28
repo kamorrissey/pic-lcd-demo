@@ -1,0 +1,254 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr USLetter 11000 8500
+encoding utf-8
+Sheet 1 1
+Title "LCD Test Generator"
+Date "2021-05-24"
+Rev "REV1"
+Comp "Karen A Morrissey"
+Comment1 "A fixed frequency AC square wave generator"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:C C1
+U 1 1 60AC045E
+P 4750 2850
+F 0 "C1" H 4635 2804 50  0000 R CNN
+F 1 "0.1uF" H 4635 2895 50  0000 R CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 4788 2700 50  0001 C CNN
+F 3 "~" H 4750 2850 50  0001 C CNN
+	1    4750 2850
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J4
+U 1 1 60AC0D32
+P 8000 4200
+F 0 "J4" H 7972 4132 50  0000 R CNN
+F 1 "LCD Signal Out" H 7972 4223 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 8000 4200 50  0001 C CNN
+F 3 "~" H 8000 4200 50  0001 C CNN
+	1    8000 4200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x05_Male J1
+U 1 1 60AC23D3
+P 3100 2800
+F 0 "J1" H 3208 3181 50  0000 C CNN
+F 1 "ICSP" H 3208 3090 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Horizontal" H 3100 2800 50  0001 C CNN
+F 3 "~" H 3100 2800 50  0001 C CNN
+	1    3100 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J2
+U 1 1 60AC3DE1
+P 3100 4450
+F 0 "J2" H 3208 4631 50  0000 C CNN
+F 1 "V+" H 3208 4540 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 3100 4450 50  0001 C CNN
+F 3 "~" H 3100 4450 50  0001 C CNN
+	1    3100 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J3
+U 1 1 60AC42ED
+P 3100 4750
+F 0 "J3" H 3208 4931 50  0000 C CNN
+F 1 "V-" H 3208 4840 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 3100 4750 50  0001 C CNN
+F 3 "~" H 3100 4750 50  0001 C CNN
+	1    3100 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 60AC440B
+P 7100 4100
+F 0 "C2" V 6848 4100 50  0000 C CNN
+F 1 "0.1uF" V 6939 4100 50  0000 C CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 7138 3950 50  0001 C CNN
+F 3 "~" H 7100 4100 50  0001 C CNN
+	1    7100 4100
+	0    1    1    0   
+$EndComp
+$Comp
+L power:VDD #PWR03
+U 1 1 60ACBB5F
+P 3700 2200
+F 0 "#PWR03" H 3700 2050 50  0001 C CNN
+F 1 "VDD" H 3715 2373 50  0000 C CNN
+F 2 "" H 3700 2200 50  0001 C CNN
+F 3 "" H 3700 2200 50  0001 C CNN
+	1    3700 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDD #PWR01
+U 1 1 60ACBF01
+P 3550 4200
+F 0 "#PWR01" H 3550 4050 50  0001 C CNN
+F 1 "VDD" H 3565 4373 50  0000 C CNN
+F 2 "" H 3550 4200 50  0001 C CNN
+F 3 "" H 3550 4200 50  0001 C CNN
+	1    3550 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDD #PWR06
+U 1 1 60ACCA98
+P 5650 2400
+F 0 "#PWR06" H 5650 2250 50  0001 C CNN
+F 1 "VDD" H 5665 2573 50  0000 C CNN
+F 2 "" H 5650 2400 50  0001 C CNN
+F 3 "" H 5650 2400 50  0001 C CNN
+	1    5650 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 60ACD972
+P 3700 3200
+F 0 "#PWR04" H 3700 2950 50  0001 C CNN
+F 1 "GND" H 3705 3027 50  0000 C CNN
+F 2 "" H 3700 3200 50  0001 C CNN
+F 3 "" H 3700 3200 50  0001 C CNN
+	1    3700 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 60ACDB6C
+P 4750 3250
+F 0 "#PWR05" H 4750 3000 50  0001 C CNN
+F 1 "GND" H 4755 3077 50  0000 C CNN
+F 2 "" H 4750 3250 50  0001 C CNN
+F 3 "" H 4750 3250 50  0001 C CNN
+	1    4750 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 60ACDD61
+P 3550 5000
+F 0 "#PWR02" H 3550 4750 50  0001 C CNN
+F 1 "GND" H 3555 4827 50  0000 C CNN
+F 2 "" H 3550 5000 50  0001 C CNN
+F 3 "" H 3550 5000 50  0001 C CNN
+	1    3550 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L KAM_Custom:PIC12F1572-IP U1
+U 1 1 60ACF260
+P 5250 2900
+F 0 "U1" H 5222 2096 50  0000 R CNN
+F 1 "PIC12F1572-IP" H 5222 2005 50  0000 R CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 4850 2050 50  0001 C CNN
+F 3 "" H 4850 2050 50  0001 C CNN
+	1    5250 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR07
+U 1 1 60AD27FA
+P 5700 4950
+F 0 "#PWR07" H 5700 4700 50  0001 C CNN
+F 1 "GND" H 5705 4777 50  0000 C CNN
+F 2 "" H 5700 4950 50  0001 C CNN
+F 3 "" H 5700 4950 50  0001 C CNN
+	1    5700 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 2700 5650 2550
+Wire Wire Line
+	4750 2700 4750 2550
+Wire Wire Line
+	4750 2550 5650 2550
+Connection ~ 5650 2550
+Wire Wire Line
+	5650 2550 5650 2400
+Wire Wire Line
+	4750 3000 4750 3250
+Wire Wire Line
+	5700 4800 5700 4950
+Text Label 6350 3950 0    50   ~ 0
+VPP
+Text Label 6350 3500 0    50   ~ 0
+ICSPDAT
+Text Label 6350 3650 0    50   ~ 0
+ICSPCLK
+Text Label 3300 2600 0    50   ~ 0
+VPP
+Text Label 3300 2900 0    50   ~ 0
+ICSPDAT
+Text Label 3300 3000 0    50   ~ 0
+ICSPCLK
+Wire Wire Line
+	3300 2700 3700 2700
+Wire Wire Line
+	3300 2800 3700 2800
+Wire Wire Line
+	3300 4750 3550 4750
+Wire Wire Line
+	3550 4750 3550 4900
+Wire Wire Line
+	3300 4450 3550 4450
+Wire Wire Line
+	3550 4450 3550 4300
+$Comp
+L power:PWR_FLAG #FLG01
+U 1 1 60AD9A73
+P 3550 4300
+F 0 "#FLG01" H 3550 4375 50  0001 C CNN
+F 1 "PWR_FLAG" V 3550 4428 50  0000 L CNN
+F 2 "" H 3550 4300 50  0001 C CNN
+F 3 "~" H 3550 4300 50  0001 C CNN
+	1    3550 4300
+	0    1    1    0   
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG02
+U 1 1 60AD9CDE
+P 3550 4900
+F 0 "#FLG02" H 3550 4975 50  0001 C CNN
+F 1 "PWR_FLAG" V 3550 5028 50  0000 L CNN
+F 2 "" H 3550 4900 50  0001 C CNN
+F 3 "~" H 3550 4900 50  0001 C CNN
+	1    3550 4900
+	0    1    1    0   
+$EndComp
+Connection ~ 3550 4900
+Wire Wire Line
+	3550 4900 3550 5000
+Connection ~ 3550 4300
+Wire Wire Line
+	3550 4300 3550 4200
+Wire Wire Line
+	6350 4100 6950 4100
+Wire Wire Line
+	3700 2200 3700 2700
+Wire Wire Line
+	3700 2800 3700 3200
+Wire Wire Line
+	7250 4100 7800 4100
+NoConn ~ 6350 3800
+Wire Wire Line
+	6350 4250 6900 4250
+Wire Wire Line
+	6900 4250 6900 4400
+Wire Wire Line
+	6900 4400 7300 4400
+Wire Wire Line
+	7300 4400 7300 4200
+Wire Wire Line
+	7300 4200 7800 4200
+$EndSCHEMATC
