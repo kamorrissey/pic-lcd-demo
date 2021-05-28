@@ -10,6 +10,6 @@ Qty | Reference | Value | Description
 1 | IC1 | PIC16LF19156-I/SP or PICF19156-I/SP | microcontroller
 1 | C1 | 100nF (0.1uF) | ceramic
 1 | LCD1 | LCD-S401M16KR | 4-digit multiplexed 3V LCD 7-segment display
-1 | D1 | - | 3V LED (optional)
+1 | D1 | 3V LED | (optional)
 1 | J1 | 01x05 2.54mm pin header | for in-circuit programming
 1 | B1 | 3V | power source
