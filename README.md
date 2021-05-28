@@ -1,3 +1,5 @@
+![LCD demonstration circuit breadboard](assets/images/LCD_Demo.jpg)
+
 # pic-lcd-demo
 
 Demonstration of driving a multiplexed LCD segment display using the LCD driver module of a PIC16LF19156 MCU.
