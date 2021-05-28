@@ -64,11 +64,11 @@ void LCD_Initialize(void)
     // LP 1:8; WFT Type-A waveform; 
     LCDPS = 0x07;
     
-    // LCDCST 2/7 of Max Resistance; 
-    LCDREF = 0x02;
+    // LCDCST Max contrast (Min Resistance); 
+    LCDREF = 0x00;
     
-    // LRLAP High; LRLBP Low; LCDIRI disabled; LRLAT A power 4, B power 12; 
-    LCDRL = 0xD4;
+    // LRLAP disabled; LRLBP Low; LCDIRI disabled; LRLAT Always B Power mode; 
+    LCDRL = 0x10;
     
     // BIAS 3.00V; EN5V disabled; LPEN disabled; 
     LCDVCON1 = 0x02;
