@@ -12,4 +12,4 @@ Qty | Reference | Value | Description
 1 | LCD1 | LCD-S401M16KR | 4-digit multiplexed 3V LCD 7-segment display
 1 | D1 | 3V LED | (optional)
 1 | J1 | 01x05 2.54mm pin header | for in-circuit programming
-1 | B1 | 3V | power source
+1 | BT1 | 3V | power source
