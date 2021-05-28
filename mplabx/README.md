@@ -12,4 +12,4 @@ There are three MPLAB firmware projects here:
 * [LCD_Test_Generator_PIC12F1572.X](LCD_Test_Generator_PIC12F1572.X), to generate a 250Hz AC square wave using a smaller, cheaper PIC12F1572 MCU
 * [LCD_Demo_PIC16LF19156.X](LCD_Demo_PIC16LF19156.X), to demonstrate driving an LCD segment display using a PIC16LF19156 MCU
 
-To open any of these projects , open the respective *.X directory in MPLAB X IDE.
+To open any of these projects , open the respective \*.X directory in MPLAB X IDE.
