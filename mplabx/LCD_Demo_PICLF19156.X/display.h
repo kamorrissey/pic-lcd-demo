@@ -46,6 +46,8 @@ void DISPLAY_ShowDemoTemp(void);
 
 void DISPLAY_ShowNumber(int16_t value, uint8_t decimal_places);
 
+void DISPLAY_BatteryLow(void);
+
 #ifdef	__cplusplus
 }
 #endif

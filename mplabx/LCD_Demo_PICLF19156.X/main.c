@@ -44,8 +44,8 @@
 #include "mcc_generated_files/mcc.h"
 #include "display.h"
 
-float UTIL_SupplyVoltage(void);
-
+// forward references
+float Get_SupplyVoltage(void);
 
 /*
                          Main application
@@ -73,64 +73,19 @@ void main(void)
     while (1)
     {
         LED_SetHigh();
-        float supply_voltage = UTIL_SupplyVoltage();
+        float supply_voltage = Get_SupplyVoltage();
+        LED_SetLow();
+        if ( supply_voltage < 2.65 )
+        {
+            DISPLAY_BatteryLow();
+            __delay_ms(1000);
+        }
         DISPLAY_ShowNumber((int16_t)(supply_voltage*100.0 + 0.5), 2);
-        LED_SetLow();
         __delay_ms(1000);
-#if 0
-        // Blink LED and LCD
-        LED_SetHigh();
-        DISPLAY_AllPixels_On();
-        __delay_ms(1000);
-        
-        LED_SetLow();
-        DISPLAY_AllPixels_Off();
-        __delay_ms(1000);
-        
-        LED_SetHigh();
-        DISPLAY_ShowDemoTemp();
-        __delay_ms(1000);
-        
-        LED_SetLow();
-        DISPLAY_AllPixels_Off();
-        __delay_ms(1000);        
-        
-        LED_SetHigh();
-        DISPLAY_ShowNumber(1, 0);
-        __delay_ms(1000);
-        
-        LED_SetLow();
-        DISPLAY_AllPixels_Off();
-        __delay_ms(1000);        
-        
-        LED_SetHigh();
-        DISPLAY_ShowNumber(1, 1);
-        __delay_ms(1000);
-        
-        LED_SetLow();
-        DISPLAY_AllPixels_Off();
-        __delay_ms(1000);        
-        
-        LED_SetHigh();
-        DISPLAY_ShowNumber(1, 2);
-        __delay_ms(1000);
-        
-        LED_SetLow();
-        DISPLAY_AllPixels_Off();
-        __delay_ms(1000);        
-        
-        LED_SetHigh();
-        DISPLAY_ShowNumber(1, 3);
-        __delay_ms(1000);
-        
-        LED_SetLow();
-        DISPLAY_AllPixels_Off();
-        __delay_ms(1000);
-#endif        
     }
 }
 
-float UTIL_SupplyVoltage(void)
+float Get_SupplyVoltage(void)
 {
     ADCC_StartConversion(channel_FVR_Buffer1);
     while(!ADCC_IsConversionDone());

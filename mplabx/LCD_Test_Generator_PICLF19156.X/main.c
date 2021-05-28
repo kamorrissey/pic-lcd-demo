@@ -66,15 +66,14 @@ void main(void)
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
 
-    // Use voltage across PC0 & RC1 to create a 250Hz square wave
     while (1)
     {
-        // Generate two out of phase 50% duty 250 Hz pulse streams
-        RC0 = 1;
-        RC1 = 0;
+        // Generate two complementary 50% duty 250 Hz pulse streams
+        SIGOUTA_SetHigh();
+        SIGOUTB_SetLow();
         __delay_ms(2);
-        RC0 = 0;
-        RC1 = 1;
+        SIGOUTA_SetLow();
+        SIGOUTB_SetHigh();
         __delay_ms(2);
     }
 }

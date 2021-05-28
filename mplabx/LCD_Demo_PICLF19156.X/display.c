@@ -93,14 +93,21 @@ unsigned char DISPLAY_CharToSegments(unsigned char ch)
     case '9':
         return ( SEG_A_BIT | SEG_B_BIT | SEG_C_BIT | SEG_D_BIT | SEG_F_BIT | SEG_G_BIT );
     case 'b':
+        return ( SEG_C_BIT | SEG_D_BIT | SEG_E_BIT | SEG_F_BIT | SEG_G_BIT );
     case 'L':
+        return ( SEG_D_BIT | SEG_E_BIT | SEG_F_BIT );
     case 'o':
+        return ( SEG_C_BIT | SEG_D_BIT | SEG_E_BIT | SEG_G_BIT );
     case 'H':
+        return ( SEG_B_BIT | SEG_C_BIT | SEG_E_BIT | SEG_F_BIT | SEG_G_BIT );
     case 'i':
+        return ( SEG_C_BIT );
     case 'r':
+        return ( SEG_E_BIT | SEG_G_BIT );
     case 'd':
+        return ( SEG_B_BIT | SEG_C_BIT | SEG_D_BIT | SEG_E_BIT | SEG_G_BIT );
     case 'Y':
-        return ( SEG_A_BIT | SEG_B_BIT | SEG_C_BIT | SEG_D_BIT | SEG_E_BIT | SEG_F_BIT | SEG_G_BIT );
+        return ( SEG_B_BIT | SEG_C_BIT | SEG_D_BIT | SEG_F_BIT | SEG_G_BIT );
         break;
     }        
 }
@@ -430,4 +437,16 @@ void DISPLAY_ShowNumber(int16_t value, uint8_t decimal_places)
             DISPLAY_DP3_Off();
             break;
     }
+}
+
+void DISPLAY_BatteryLow(void)
+{
+    DISPLAY_DIG1_Segments(DISPLAY_CharToSegments('b'));
+    DISPLAY_DIG2_Segments(DISPLAY_CharToSegments('L'));
+    DISPLAY_DIG3_Segments(DISPLAY_CharToSegments('o'));
+    DISPLAY_DIG4_Segments(DISPLAY_CharToSegments(' '));
+    DISPLAY_DP1_Off();
+    DISPLAY_DP2_Off();
+    DISPLAY_DP3_Off();
+    DISPLAY_COLON_Off();
 }

@@ -65,42 +65,42 @@
 #define PULL_UP_ENABLED      1
 #define PULL_UP_DISABLED     0
 
-// get/set IO_RA4 aliases
-#define IO_RA4_TRIS                 TRISAbits.TRISA4
-#define IO_RA4_LAT                  LATAbits.LATA4
-#define IO_RA4_PORT                 PORTAbits.RA4
-#define IO_RA4_WPU                  WPUAbits.WPUA4
-#define IO_RA4_OD                   ODCONAbits.ODA4
-#define IO_RA4_ANS                  ANSELAbits.ANSA4
-#define IO_RA4_SetHigh()            do { LATAbits.LATA4 = 1; } while(0)
-#define IO_RA4_SetLow()             do { LATAbits.LATA4 = 0; } while(0)
-#define IO_RA4_Toggle()             do { LATAbits.LATA4 = ~LATAbits.LATA4; } while(0)
-#define IO_RA4_GetValue()           PORTAbits.RA4
-#define IO_RA4_SetDigitalInput()    do { TRISAbits.TRISA4 = 1; } while(0)
-#define IO_RA4_SetDigitalOutput()   do { TRISAbits.TRISA4 = 0; } while(0)
-#define IO_RA4_SetPullup()          do { WPUAbits.WPUA4 = 1; } while(0)
-#define IO_RA4_ResetPullup()        do { WPUAbits.WPUA4 = 0; } while(0)
-#define IO_RA4_SetPushPull()        do { ODCONAbits.ODA4 = 0; } while(0)
-#define IO_RA4_SetOpenDrain()       do { ODCONAbits.ODA4 = 1; } while(0)
-#define IO_RA4_SetAnalogMode()      do { ANSELAbits.ANSA4 = 1; } while(0)
-#define IO_RA4_SetDigitalMode()     do { ANSELAbits.ANSA4 = 0; } while(0)
+// get/set SIGOUTA aliases
+#define SIGOUTA_TRIS                 TRISAbits.TRISA4
+#define SIGOUTA_LAT                  LATAbits.LATA4
+#define SIGOUTA_PORT                 PORTAbits.RA4
+#define SIGOUTA_WPU                  WPUAbits.WPUA4
+#define SIGOUTA_OD                   ODCONAbits.ODA4
+#define SIGOUTA_ANS                  ANSELAbits.ANSA4
+#define SIGOUTA_SetHigh()            do { LATAbits.LATA4 = 1; } while(0)
+#define SIGOUTA_SetLow()             do { LATAbits.LATA4 = 0; } while(0)
+#define SIGOUTA_Toggle()             do { LATAbits.LATA4 = ~LATAbits.LATA4; } while(0)
+#define SIGOUTA_GetValue()           PORTAbits.RA4
+#define SIGOUTA_SetDigitalInput()    do { TRISAbits.TRISA4 = 1; } while(0)
+#define SIGOUTA_SetDigitalOutput()   do { TRISAbits.TRISA4 = 0; } while(0)
+#define SIGOUTA_SetPullup()          do { WPUAbits.WPUA4 = 1; } while(0)
+#define SIGOUTA_ResetPullup()        do { WPUAbits.WPUA4 = 0; } while(0)
+#define SIGOUTA_SetPushPull()        do { ODCONAbits.ODA4 = 0; } while(0)
+#define SIGOUTA_SetOpenDrain()       do { ODCONAbits.ODA4 = 1; } while(0)
+#define SIGOUTA_SetAnalogMode()      do { ANSELAbits.ANSA4 = 1; } while(0)
+#define SIGOUTA_SetDigitalMode()     do { ANSELAbits.ANSA4 = 0; } while(0)
 
-// get/set IO_RA5 aliases
-#define IO_RA5_TRIS                 TRISAbits.TRISA5
-#define IO_RA5_LAT                  LATAbits.LATA5
-#define IO_RA5_PORT                 PORTAbits.RA5
-#define IO_RA5_WPU                  WPUAbits.WPUA5
-#define IO_RA5_OD                   ODCONAbits.ODA5
-#define IO_RA5_SetHigh()            do { LATAbits.LATA5 = 1; } while(0)
-#define IO_RA5_SetLow()             do { LATAbits.LATA5 = 0; } while(0)
-#define IO_RA5_Toggle()             do { LATAbits.LATA5 = ~LATAbits.LATA5; } while(0)
-#define IO_RA5_GetValue()           PORTAbits.RA5
-#define IO_RA5_SetDigitalInput()    do { TRISAbits.TRISA5 = 1; } while(0)
-#define IO_RA5_SetDigitalOutput()   do { TRISAbits.TRISA5 = 0; } while(0)
-#define IO_RA5_SetPullup()          do { WPUAbits.WPUA5 = 1; } while(0)
-#define IO_RA5_ResetPullup()        do { WPUAbits.WPUA5 = 0; } while(0)
-#define IO_RA5_SetPushPull()        do { ODCONAbits.ODA5 = 0; } while(0)
-#define IO_RA5_SetOpenDrain()       do { ODCONAbits.ODA5 = 1; } while(0)
+// get/set SIGOUTB aliases
+#define SIGOUTB_TRIS                 TRISAbits.TRISA5
+#define SIGOUTB_LAT                  LATAbits.LATA5
+#define SIGOUTB_PORT                 PORTAbits.RA5
+#define SIGOUTB_WPU                  WPUAbits.WPUA5
+#define SIGOUTB_OD                   ODCONAbits.ODA5
+#define SIGOUTB_SetHigh()            do { LATAbits.LATA5 = 1; } while(0)
+#define SIGOUTB_SetLow()             do { LATAbits.LATA5 = 0; } while(0)
+#define SIGOUTB_Toggle()             do { LATAbits.LATA5 = ~LATAbits.LATA5; } while(0)
+#define SIGOUTB_GetValue()           PORTAbits.RA5
+#define SIGOUTB_SetDigitalInput()    do { TRISAbits.TRISA5 = 1; } while(0)
+#define SIGOUTB_SetDigitalOutput()   do { TRISAbits.TRISA5 = 0; } while(0)
+#define SIGOUTB_SetPullup()          do { WPUAbits.WPUA5 = 1; } while(0)
+#define SIGOUTB_ResetPullup()        do { WPUAbits.WPUA5 = 0; } while(0)
+#define SIGOUTB_SetPushPull()        do { ODCONAbits.ODA5 = 0; } while(0)
+#define SIGOUTB_SetOpenDrain()       do { ODCONAbits.ODA5 = 1; } while(0)
 
 /**
    @Param

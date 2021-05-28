@@ -65,39 +65,39 @@
 #define PULL_UP_ENABLED      1
 #define PULL_UP_DISABLED     0
 
-// get/set IO_RC0 aliases
-#define IO_RC0_TRIS                 TRISCbits.TRISC0
-#define IO_RC0_LAT                  LATCbits.LATC0
-#define IO_RC0_PORT                 PORTCbits.RC0
-#define IO_RC0_WPU                  WPUCbits.WPUC0
-#define IO_RC0_OD                   ODCONCbits.ODCC0
-#define IO_RC0_SetHigh()            do { LATCbits.LATC0 = 1; } while(0)
-#define IO_RC0_SetLow()             do { LATCbits.LATC0 = 0; } while(0)
-#define IO_RC0_Toggle()             do { LATCbits.LATC0 = ~LATCbits.LATC0; } while(0)
-#define IO_RC0_GetValue()           PORTCbits.RC0
-#define IO_RC0_SetDigitalInput()    do { TRISCbits.TRISC0 = 1; } while(0)
-#define IO_RC0_SetDigitalOutput()   do { TRISCbits.TRISC0 = 0; } while(0)
-#define IO_RC0_SetPullup()          do { WPUCbits.WPUC0 = 1; } while(0)
-#define IO_RC0_ResetPullup()        do { WPUCbits.WPUC0 = 0; } while(0)
-#define IO_RC0_SetPushPull()        do { ODCONCbits.ODCC0 = 0; } while(0)
-#define IO_RC0_SetOpenDrain()       do { ODCONCbits.ODCC0 = 1; } while(0)
+// get/set SIGOUTA aliases
+#define SIGOUTA_TRIS                 TRISCbits.TRISC0
+#define SIGOUTA_LAT                  LATCbits.LATC0
+#define SIGOUTA_PORT                 PORTCbits.RC0
+#define SIGOUTA_WPU                  WPUCbits.WPUC0
+#define SIGOUTA_OD                   ODCONCbits.ODCC0
+#define SIGOUTA_SetHigh()            do { LATCbits.LATC0 = 1; } while(0)
+#define SIGOUTA_SetLow()             do { LATCbits.LATC0 = 0; } while(0)
+#define SIGOUTA_Toggle()             do { LATCbits.LATC0 = ~LATCbits.LATC0; } while(0)
+#define SIGOUTA_GetValue()           PORTCbits.RC0
+#define SIGOUTA_SetDigitalInput()    do { TRISCbits.TRISC0 = 1; } while(0)
+#define SIGOUTA_SetDigitalOutput()   do { TRISCbits.TRISC0 = 0; } while(0)
+#define SIGOUTA_SetPullup()          do { WPUCbits.WPUC0 = 1; } while(0)
+#define SIGOUTA_ResetPullup()        do { WPUCbits.WPUC0 = 0; } while(0)
+#define SIGOUTA_SetPushPull()        do { ODCONCbits.ODCC0 = 0; } while(0)
+#define SIGOUTA_SetOpenDrain()       do { ODCONCbits.ODCC0 = 1; } while(0)
 
-// get/set IO_RC1 aliases
-#define IO_RC1_TRIS                 TRISCbits.TRISC1
-#define IO_RC1_LAT                  LATCbits.LATC1
-#define IO_RC1_PORT                 PORTCbits.RC1
-#define IO_RC1_WPU                  WPUCbits.WPUC1
-#define IO_RC1_OD                   ODCONCbits.ODCC1
-#define IO_RC1_SetHigh()            do { LATCbits.LATC1 = 1; } while(0)
-#define IO_RC1_SetLow()             do { LATCbits.LATC1 = 0; } while(0)
-#define IO_RC1_Toggle()             do { LATCbits.LATC1 = ~LATCbits.LATC1; } while(0)
-#define IO_RC1_GetValue()           PORTCbits.RC1
-#define IO_RC1_SetDigitalInput()    do { TRISCbits.TRISC1 = 1; } while(0)
-#define IO_RC1_SetDigitalOutput()   do { TRISCbits.TRISC1 = 0; } while(0)
-#define IO_RC1_SetPullup()          do { WPUCbits.WPUC1 = 1; } while(0)
-#define IO_RC1_ResetPullup()        do { WPUCbits.WPUC1 = 0; } while(0)
-#define IO_RC1_SetPushPull()        do { ODCONCbits.ODCC1 = 0; } while(0)
-#define IO_RC1_SetOpenDrain()       do { ODCONCbits.ODCC1 = 1; } while(0)
+// get/set SIGOUTB aliases
+#define SIGOUTB_TRIS                 TRISCbits.TRISC1
+#define SIGOUTB_LAT                  LATCbits.LATC1
+#define SIGOUTB_PORT                 PORTCbits.RC1
+#define SIGOUTB_WPU                  WPUCbits.WPUC1
+#define SIGOUTB_OD                   ODCONCbits.ODCC1
+#define SIGOUTB_SetHigh()            do { LATCbits.LATC1 = 1; } while(0)
+#define SIGOUTB_SetLow()             do { LATCbits.LATC1 = 0; } while(0)
+#define SIGOUTB_Toggle()             do { LATCbits.LATC1 = ~LATCbits.LATC1; } while(0)
+#define SIGOUTB_GetValue()           PORTCbits.RC1
+#define SIGOUTB_SetDigitalInput()    do { TRISCbits.TRISC1 = 1; } while(0)
+#define SIGOUTB_SetDigitalOutput()   do { TRISCbits.TRISC1 = 0; } while(0)
+#define SIGOUTB_SetPullup()          do { WPUCbits.WPUC1 = 1; } while(0)
+#define SIGOUTB_ResetPullup()        do { WPUCbits.WPUC1 = 0; } while(0)
+#define SIGOUTB_SetPushPull()        do { ODCONCbits.ODCC1 = 0; } while(0)
+#define SIGOUTB_SetOpenDrain()       do { ODCONCbits.ODCC1 = 1; } while(0)
 
 /**
    @Param
