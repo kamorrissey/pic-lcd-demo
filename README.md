@@ -1,8 +1,6 @@
 # pic-lcd-demo
 
-(This project is still being set up. Don't count on anything in it yet.)
-
-Demonstration of driving a multiplexed LCD segment display using the LCD module of a PIC16LF19156 MCU.
+Demonstration of driving a multiplexed LCD segment display using the LCD driver module of a PIC16LF19156 MCU.
 Includes two versions of another PIC-based circuit, a poor person's AC square wave generator to use to test an LCD segment display.
 
 # Contents
@@ -14,8 +12,8 @@ There are two circuits with firmware in this project:
   * one using a smaller, cheaper PIC12F1572 MCU
 
 There are two directories at this level:
-* kicad - KiCad projects for schematics
-* mplabx - MPLAB C IDE projects for PIC microcontroller firmware
+* [kicad](kicad) - KiCad projects for schematics
+* [mplabx](mplabx) - MPLAB X IDE projects for PIC microcontroller firmware, written in C
 
 # Introduction
 
@@ -62,15 +60,24 @@ All the circuits in this project can be easily breadboarded.
 
 ## Microcontroller
 
-I chose a PICLF19156 MCU for my non-contact thermometer design for several reasons:
+I chose a PICLF19156-I/SP MCU
+([datasheet](https://ww1.microchip.com/downloads/en/DeviceDoc/PIC16LF19155-56-75-76-85-86-Data-Sheet-40001923B.pdf))
+for my non-contact thermometer design for several reasons:
 * 28-pin SPDIP package is breadboardable and hand solderable
 * lowest adequate pin count and footprint of a PIC that has a built-in LCD driver module
-* able to directly operate off 3V provided by 2xAA cells
+* able to directly operate off 3V provided by 2xAA cells or 1xAA cell with a boost converter
 * has I2C/IIC/SMBus interface for eventually communicating with a Melexis MLX90614 IR temperature sensor
 
-It is both narrower and smaller than the 40-pin DIP PIC16F19176 that I originally considered. The LF chips are also lower-power than the F chips, operating at 1.8V-3.6V, compared to 2.4V-5.5V for the F chips.
-You can also use to PIC16F19156 to have the flexibility to operate at 3V or 5V.
-The PIC(L)F19175/6 would work with minor changes to circuits and firmware.
+It is both narrower and smaller than the 40-pin DIP PIC16F19176
+([datasheet](https://ww1.microchip.com/downloads/en/DeviceDoc/PIC16LF19155-56-75-76-85-86-Data-Sheet-40001923B.pdf))
+that I originally considered.
+The LF chips are also lower-power than the F chips,
+operating at 1.8V-3.6V, compared to 2.4V-5.5V for the F chips.
+You can also use to PIC16F19156 (note the F instead of LF)
+to have the flexibility to operate at 3V or 5V.
+The PIC(L)F19175/6
+([datasheet](https://ww1.microchip.com/downloads/en/DeviceDoc/PIC16LF19155-56-75-76-85-86-Data-Sheet-40001923B.pdf))
+would work with minor changes to circuits and firmware.
 If you use a different LCD, it may be static (unmultiplexed);
 if so, you may need to use a surface mount PIC with more pins,
 such as PIC16(L)F19185/6 (44-pin) or PIC16(L)F19195/6/7 (64-pin).
@@ -85,14 +92,28 @@ I used a [Pickit 4](https://www.microchip.com/developmenttools/ProductDetails/PG
 there may be cheaper alternatives, such as the older
 [PicKit 3](https://www.amazon.com/Microchip-Programmer-Debugger-Emulator-Controller/dp/B07WS5JL3Z).
 
-I also implemented the square wave generator using an 8-pin, very inexpensive ($0.80 quantity one) PIC12F1572, which will operate at 2.4V-5.5V, making it suitable for testing either 3V or 5V LCDs.
+I also implemented the square wave generator using
+an 8-pin, very inexpensive ($0.80 quantity one) PIC12F1572-I/P
+([datasheet](https://ww1.microchip.com/downloads/en/DeviceDoc/40001723D.pdf)),
+which will operate at 2.4V-5.5V,
+making it suitable for testing either 3V or 5V LCDs.
 That circuit and firmware are also provided.
 
 ## LCD Display
 
-The display I chose for the my thermometer project was a [Lumex LCD-S401M16KR](https://www.mouser.com/datasheet/2/244/LCD-S401M16KR-1776741.pdf) available cheaply from Digikey and Mouser.
-It operates at 3V and is 4-way multiplexed,
-allowing a 28- or 40-pin MCU to be adequate since only 12 pins are needed to drive the 32 pixels of the display.
+LCD displays require much less current to operate (microamps)
+than LED displays (milliamps).
+
+The display I chose for the my thermometer project was a Lumex LCD-S401M16KR
+([datasheet](https://www.lumex.com/datasheet/LCD-S401M16KR))
+available cheaply (<$2 quantity 1) from Digikey and Mouser.
+It is a 4-digit, 7-segment display
+with 3 decimal points and a colon
+operating at 3VAC.
+It is 4-way multiplexed,
+allowing a 28- or 40-pin MCU to be adequate since only 12 pins
+(4 common, 8 segment)
+are needed to drive the 32 (4*8 = 32) pixels of the display.
 This is the LCD that will be used here.
 
 Similar static (unmultiplexed) displays would likely require an SMT MCU
