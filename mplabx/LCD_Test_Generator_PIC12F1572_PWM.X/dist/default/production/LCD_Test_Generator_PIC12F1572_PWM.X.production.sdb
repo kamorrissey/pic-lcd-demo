@@ -1,0 +1,308 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 12F1572 ]
+[d frameptr 6 ]
+"5 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"57 C:\Users\kamor\Dropbox\E-Projects\pic-lcd-demo\mplabx\LCD_Test_Generator_PIC12F1572_PWM.X\main.c
+[v _main main `(v  1 e 1 0 ]
+"92
+[v _Freq_to_Toggle_Period Freq_to_Toggle_Period `(us  1 e 2 0 ]
+"50 C:\Users\kamor\Dropbox\E-Projects\pic-lcd-demo\mplabx\LCD_Test_Generator_PIC12F1572_PWM.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"60
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+"70
+[v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
+"55 C:\Users\kamor\Dropbox\E-Projects\pic-lcd-demo\mplabx\LCD_Test_Generator_PIC12F1572_PWM.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"58 C:\Users\kamor\Dropbox\E-Projects\pic-lcd-demo\mplabx\LCD_Test_Generator_PIC12F1572_PWM.X\mcc_generated_files/pwm1.c
+[v _PWM1_Initialize PWM1_Initialize `(v  1 e 1 0 ]
+"113
+[v _PWM1_Start PWM1_Start `(v  1 e 1 0 ]
+"145
+[v _PWM1_PeriodSet PWM1_PeriodSet `(v  1 e 1 0 ]
+"58 C:\Users\kamor\Dropbox\E-Projects\pic-lcd-demo\mplabx\LCD_Test_Generator_PIC12F1572_PWM.X\mcc_generated_files/pwm2.c
+[v _PWM2_Initialize PWM2_Initialize `(v  1 e 1 0 ]
+"113
+[v _PWM2_Start PWM2_Start `(v  1 e 1 0 ]
+"145
+[v _PWM2_PeriodSet PWM2_PeriodSet `(v  1 e 1 0 ]
+"914 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic12f1572.h
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+[s S53 . 1 `uc 1 PS0 1 0 :1:0 
+`uc 1 PS1 1 0 :1:1 
+`uc 1 PS2 1 0 :1:2 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 TMR0SE 1 0 :1:4 
+`uc 1 TMR0CS 1 0 :1:5 
+`uc 1 INTEDG 1 0 :1:6 
+`uc 1 nWPUEN 1 0 :1:7 
+]
+"1100
+[s S62 . 1 `uc 1 PS 1 0 :3:0 
+`uc 1 . 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+]
+[u S67 . 1 `S53 1 . 1 0 `S62 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES67  1 e 1 @149 ]
+"1217
+[v _WDTCON WDTCON `VEuc  1 e 1 @151 ]
+"1276
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @152 ]
+"1334
+[v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
+"1712
+[v _LATA LATA `VEuc  1 e 1 @268 ]
+"1914
+[v _BORCON BORCON `VEuc  1 e 1 @278 ]
+"2130
+[v _APFCON APFCON `VEuc  1 e 1 @285 ]
+"2242
+[v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+"2743
+[v _WPUA WPUA `VEuc  1 e 1 @524 ]
+"2801
+[v _ODCONA ODCONA `VEuc  1 e 1 @652 ]
+"2854
+[v _SLRCONA SLRCONA `VEuc  1 e 1 @780 ]
+"2907
+[v _INLVLA INLVLA `VEuc  1 e 1 @908 ]
+"3594
+[v _PWM1PHL PWM1PHL `VEuc  1 e 1 @3473 ]
+"3672
+[v _PWM1PHH PWM1PHH `VEuc  1 e 1 @3474 ]
+"3757
+[v _PWM1DCL PWM1DCL `VEuc  1 e 1 @3475 ]
+"3835
+[v _PWM1DCH PWM1DCH `VEuc  1 e 1 @3476 ]
+"3920
+[v _PWM1PRL PWM1PRL `VEuc  1 e 1 @3477 ]
+"3998
+[v _PWM1PRH PWM1PRH `VEuc  1 e 1 @3478 ]
+"4083
+[v _PWM1OFL PWM1OFL `VEuc  1 e 1 @3479 ]
+"4161
+[v _PWM1OFH PWM1OFH `VEuc  1 e 1 @3480 ]
+"4246
+[v _PWM1TMRL PWM1TMRL `VEuc  1 e 1 @3481 ]
+"4324
+[v _PWM1TMRH PWM1TMRH `VEuc  1 e 1 @3482 ]
+"4402
+[v _PWM1CON PWM1CON `VEuc  1 e 1 @3483 ]
+[s S115 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 MODE 1 0 :2:2 
+`uc 1 POL 1 0 :1:4 
+`uc 1 OUT 1 0 :1:5 
+`uc 1 OE 1 0 :1:6 
+`uc 1 EN 1 0 :1:7 
+]
+"4435
+[s S282 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PWM1MODE0 1 0 :1:2 
+`uc 1 PWM1MODE1 1 0 :1:3 
+]
+[s S286 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PWM1MODE 1 0 :2:2 
+`uc 1 PWM1POL 1 0 :1:4 
+`uc 1 PWM1OUT 1 0 :1:5 
+`uc 1 PWM1OE 1 0 :1:6 
+`uc 1 PWM1EN 1 0 :1:7 
+]
+[s S133 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 MODE0 1 0 :1:2 
+`uc 1 MODE1 1 0 :1:3 
+]
+[u S297 . 1 `S115 1 . 1 0 `S282 1 . 1 0 `S286 1 . 1 0 `S133 1 . 1 0 ]
+[v _PWM1CONbits PWM1CONbits `VES297  1 e 1 @3483 ]
+"4510
+[v _PWM1INTE PWM1INTE `VEuc  1 e 1 @3484 ]
+"4636
+[v _PWM1INTF PWM1INTF `VEuc  1 e 1 @3485 ]
+[s S203 . 1 `uc 1 PRIF 1 0 :1:0 
+`uc 1 DCIF 1 0 :1:1 
+`uc 1 PHIF 1 0 :1:2 
+`uc 1 OFIF 1 0 :1:3 
+]
+"4660
+[s S368 . 1 `uc 1 PWM1PRIF 1 0 :1:0 
+`uc 1 PWM1DCIF 1 0 :1:1 
+`uc 1 PWM1PHIF 1 0 :1:2 
+`uc 1 PWM1OFIF 1 0 :1:3 
+]
+[u S373 . 1 `S203 1 . 1 0 `S368 1 . 1 0 ]
+[v _PWM1INTFbits PWM1INTFbits `VES373  1 e 1 @3485 ]
+"4762
+[v _PWM1CLKCON PWM1CLKCON `VEuc  1 e 1 @3486 ]
+"4870
+[v _PWM1LDCON PWM1LDCON `VEuc  1 e 1 @3487 ]
+[s S165 . 1 `uc 1 LDS 1 0 :2:0 
+`uc 1 . 1 0 :4:2 
+`uc 1 LDT 1 0 :1:6 
+`uc 1 LDA 1 0 :1:7 
+]
+"4897
+[s S330 . 1 `uc 1 PWM1LDS0 1 0 :1:0 
+`uc 1 PWM1LDS1 1 0 :1:1 
+]
+[s S333 . 1 `uc 1 PWM1LDS 1 0 :2:0 
+`uc 1 . 1 0 :4:2 
+`uc 1 PWM1LDM 1 0 :1:6 
+`uc 1 PWM1LD 1 0 :1:7 
+]
+[s S178 . 1 `uc 1 LDS0 1 0 :1:0 
+`uc 1 LDS1 1 0 :1:1 
+]
+[u S341 . 1 `S165 1 . 1 0 `S330 1 . 1 0 `S333 1 . 1 0 `S178 1 . 1 0 ]
+[v _PWM1LDCONbits PWM1LDCONbits `VES341  1 e 1 @3487 ]
+"4952
+[v _PWM1OFCON PWM1OFCON `VEuc  1 e 1 @3488 ]
+"5067
+[v _PWM2PHL PWM2PHL `VEuc  1 e 1 @3489 ]
+"5145
+[v _PWM2PHH PWM2PHH `VEuc  1 e 1 @3490 ]
+"5230
+[v _PWM2DCL PWM2DCL `VEuc  1 e 1 @3491 ]
+"5308
+[v _PWM2DCH PWM2DCH `VEuc  1 e 1 @3492 ]
+"5393
+[v _PWM2PRL PWM2PRL `VEuc  1 e 1 @3493 ]
+"5471
+[v _PWM2PRH PWM2PRH `VEuc  1 e 1 @3494 ]
+"5556
+[v _PWM2OFL PWM2OFL `VEuc  1 e 1 @3495 ]
+"5634
+[v _PWM2OFH PWM2OFH `VEuc  1 e 1 @3496 ]
+"5719
+[v _PWM2TMRL PWM2TMRL `VEuc  1 e 1 @3497 ]
+"5797
+[v _PWM2TMRH PWM2TMRH `VEuc  1 e 1 @3498 ]
+"5875
+[v _PWM2CON PWM2CON `VEuc  1 e 1 @3499 ]
+"5908
+[s S122 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PWM2MODE0 1 0 :1:2 
+`uc 1 PWM2MODE1 1 0 :1:3 
+]
+[s S126 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PWM2MODE 1 0 :2:2 
+`uc 1 PWM2POL 1 0 :1:4 
+`uc 1 PWM2OUT 1 0 :1:5 
+`uc 1 PWM2OE 1 0 :1:6 
+`uc 1 PWM2EN 1 0 :1:7 
+]
+[u S137 . 1 `S115 1 . 1 0 `S122 1 . 1 0 `S126 1 . 1 0 `S133 1 . 1 0 ]
+[v _PWM2CONbits PWM2CONbits `VES137  1 e 1 @3499 ]
+"5983
+[v _PWM2INTE PWM2INTE `VEuc  1 e 1 @3500 ]
+"6109
+[v _PWM2INTF PWM2INTF `VEuc  1 e 1 @3501 ]
+"6133
+[s S208 . 1 `uc 1 PWM2PRIF 1 0 :1:0 
+`uc 1 PWM2DCIF 1 0 :1:1 
+`uc 1 PWM2PHIF 1 0 :1:2 
+`uc 1 PWM2OFIF 1 0 :1:3 
+]
+[u S213 . 1 `S203 1 . 1 0 `S208 1 . 1 0 ]
+[v _PWM2INTFbits PWM2INTFbits `VES213  1 e 1 @3501 ]
+"6235
+[v _PWM2CLKCON PWM2CLKCON `VEuc  1 e 1 @3502 ]
+"6343
+[v _PWM2LDCON PWM2LDCON `VEuc  1 e 1 @3503 ]
+"6370
+[s S170 . 1 `uc 1 PWM2LDS0 1 0 :1:0 
+`uc 1 PWM2LDS1 1 0 :1:1 
+]
+[s S173 . 1 `uc 1 PWM2LDS 1 0 :2:0 
+`uc 1 . 1 0 :4:2 
+`uc 1 PWM2LDM 1 0 :1:6 
+`uc 1 PWM2LD 1 0 :1:7 
+]
+[u S181 . 1 `S165 1 . 1 0 `S170 1 . 1 0 `S173 1 . 1 0 `S178 1 . 1 0 ]
+[v _PWM2LDCONbits PWM2LDCONbits `VES181  1 e 1 @3503 ]
+"6425
+[v _PWM2OFCON PWM2OFCON `VEuc  1 e 1 @3504 ]
+"57 C:\Users\kamor\Dropbox\E-Projects\pic-lcd-demo\mplabx\LCD_Test_Generator_PIC12F1572_PWM.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"77
+[v main@period period `us  1 a 2 9 ]
+"90
+} 0
+"50 C:\Users\kamor\Dropbox\E-Projects\pic-lcd-demo\mplabx\LCD_Test_Generator_PIC12F1572_PWM.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"58
+} 0
+"70
+[v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
+{
+"74
+} 0
+"58 C:\Users\kamor\Dropbox\E-Projects\pic-lcd-demo\mplabx\LCD_Test_Generator_PIC12F1572_PWM.X\mcc_generated_files/pwm2.c
+[v _PWM2_Initialize PWM2_Initialize `(v  1 e 1 0 ]
+{
+"110
+} 0
+"58 C:\Users\kamor\Dropbox\E-Projects\pic-lcd-demo\mplabx\LCD_Test_Generator_PIC12F1572_PWM.X\mcc_generated_files/pwm1.c
+[v _PWM1_Initialize PWM1_Initialize `(v  1 e 1 0 ]
+{
+"110
+} 0
+"55 C:\Users\kamor\Dropbox\E-Projects\pic-lcd-demo\mplabx\LCD_Test_Generator_PIC12F1572_PWM.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"103
+} 0
+"60 C:\Users\kamor\Dropbox\E-Projects\pic-lcd-demo\mplabx\LCD_Test_Generator_PIC12F1572_PWM.X\mcc_generated_files/mcc.c
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+{
+"68
+} 0
+"113 C:\Users\kamor\Dropbox\E-Projects\pic-lcd-demo\mplabx\LCD_Test_Generator_PIC12F1572_PWM.X\mcc_generated_files/pwm2.c
+[v _PWM2_Start PWM2_Start `(v  1 e 1 0 ]
+{
+"116
+} 0
+"145
+[v _PWM2_PeriodSet PWM2_PeriodSet `(v  1 e 1 0 ]
+{
+[v PWM2_PeriodSet@periodCount periodCount `us  1 p 2 0 ]
+"149
+} 0
+"113 C:\Users\kamor\Dropbox\E-Projects\pic-lcd-demo\mplabx\LCD_Test_Generator_PIC12F1572_PWM.X\mcc_generated_files/pwm1.c
+[v _PWM1_Start PWM1_Start `(v  1 e 1 0 ]
+{
+"116
+} 0
+"145
+[v _PWM1_PeriodSet PWM1_PeriodSet `(v  1 e 1 0 ]
+{
+[v PWM1_PeriodSet@periodCount periodCount `us  1 p 2 0 ]
+"149
+} 0
+"92 C:\Users\kamor\Dropbox\E-Projects\pic-lcd-demo\mplabx\LCD_Test_Generator_PIC12F1572_PWM.X\main.c
+[v _Freq_to_Toggle_Period Freq_to_Toggle_Period `(us  1 e 2 0 ]
+{
+[v Freq_to_Toggle_Period@freq freq `l  1 p 4 6 ]
+"95
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
+{
+"10
+[v ___aldiv@quotient quotient `l  1 a 4 2 ]
+"11
+[v ___aldiv@sign sign `uc  1 a 1 1 ]
+[v ___aldiv@counter counter `uc  1 a 1 0 ]
+"5
+[v ___aldiv@divisor divisor `l  1 p 4 0 ]
+[v ___aldiv@dividend dividend `l  1 p 4 4 ]
+"41
+} 0

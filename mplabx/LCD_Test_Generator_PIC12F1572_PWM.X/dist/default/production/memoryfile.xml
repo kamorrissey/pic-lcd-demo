@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <executable name="dist/default/production\LCD_Test_Generator_PIC12F1572_PWM.X.production.hex">
+    <memory name="program">
+      <units>words</units>
+      <length>2048</length>
+      <used>332</used>
+      <free>1716</free>
+    </memory>
+    <memory name="data">
+      <units>bytes</units>
+      <length>256</length>
+      <used>23</used>
+      <free>233</free>
+    </memory>
+  </executable>
+</project>

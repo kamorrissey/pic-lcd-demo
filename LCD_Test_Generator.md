@@ -30,7 +30,9 @@ Each COM-SEG pair controls at most one pixel,
 even though that pixel can be a complex shape that doesn't look like a single display element).
 It is possible that some COM-SEG pair control no pixels.
 
-## The generator
+## The generators
+
+### delay loop generator
 
 The test generator here uses a PIC MCU to generate an AC square wave with peak-to-peak voltage approximately twice the PIC supply voltage.
 You would run the circuit from a 3V source to test 3V LCDs and from a 5V source to test 5V LCDs.
@@ -81,3 +83,16 @@ but ensure the series capacitor is in the loop. If the tester and LCD are workin
 The technique can also be used to methodically connect pairs of an unknown LCD to map out what pixels display.
 With a little thought, is should be possible to determine which are the COMs and which are the SEGs.
 
+### PWM generator
+
+Another test generator approach is to use two pulse width modulation (PWM) modules
+of the PIC to produce the two complementary DC square waves.
+This firmware does all of its work in seting up and starting the two PWM modules.
+After starting, the firmware needs do nothing else and sleeps.
+The PIC12F1572's high-frequency internal oscillator (HFINTOSC)
+is used as the clock source for the PWM modules;
+this allows the PWM modules to continue operating even if the CPU is put to sleep.
+
+In the current program for this, the PWM_FREQ variable can be set with the desired square wave freqency.
+Since the HFINTOSC of the PIC12F1572 is factory calibrated,
+the square wave frequency shouldbe accurate to within 1%.

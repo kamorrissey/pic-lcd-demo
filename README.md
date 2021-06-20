@@ -9,9 +9,12 @@ Includes two versions of another PIC-based circuit, a poor person's AC square wa
 
 There are two circuits with firmware in this project:
 * a [demonstration of driving an LCD segment display](LCD_Demo.md) with a PIC16LF19156 MCU, which has a built-in LCD driver module
-* two versions of an [AC square wave generator](LCD_Test_Generator.md) adequate for testing a bare LCD
+* three versions of an [AC square wave generator](LCD_Test_Generator.md) adequate for testing a bare LCD
   * one using the same PICLF19156 MCU
-  * one using a smaller, cheaper PIC12F1572 MCU
+  * one using a smaller, cheaper PIC12F1572 MCU that generates the square wave using software
+  * one using a PIC12F1572 MCU that generates the square wave using built-in pulse width modulation (PWM) circuitry
+  
+Both PIC12F1572 versions run on the same circuit, just with different firmware.
 
 There are two directories at this level:
 * [kicad](kicad) - KiCad projects for schematics
