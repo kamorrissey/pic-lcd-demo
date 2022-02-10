@@ -54,7 +54,7 @@ void SYSTEM_Initialize(void)
     OSCILLATOR_Initialize();
     WDT_Initialize();
     PWM1_Initialize();
-    PWM2_Initialize();
+    CWG_Initialize();
 }
 
 void OSCILLATOR_Initialize(void)

@@ -47,9 +47,11 @@
 #define PWM_PRESCALER (128)
 #define PWM_CLOCK_FREQ (HFO_FREQ / PWM_PRESCALER)
 
-const uint16_t PWM_FREQ = 200; // Hz
+const uint16_t PWM_FREQ = 250; // Hz
 
 uint16_t Freq_to_Toggle_Period(long freq);
+void CWG_Enable(void);
+void CWG_Disable(void);
 
 /*
                          Main application
@@ -77,15 +79,16 @@ void main(void)
     uint16_t period = Freq_to_Toggle_Period(PWM_FREQ);
     
     PWM1_PeriodSet(period);
-    PWM2_PeriodSet(period);
+    // PWM2_PeriodSet(period);
     
     PWM1_Start();
-    PWM2_Start();
+    // PWM2_Start();
+    CWG_Enable();
 
     while (1)
     {
-        // Add your application code
-        SLEEP();
+        // PWM and CWG can run without CPU, we can stop execution now.
+        // SLEEP();
     }
 }
 
@@ -93,6 +96,17 @@ uint16_t Freq_to_Toggle_Period(long freq)
 {
     return PWM_CLOCK_FREQ / ( freq * 2 );
 }
+
+void CWG_Enable(void)
+{
+    CWG1CON0bits.G1EN = 1;
+}
+
+void CWG_Disable(void)
+{
+    CWG1CON0bits.G1EN = 0;
+}
+
 /**
  End of File
 */

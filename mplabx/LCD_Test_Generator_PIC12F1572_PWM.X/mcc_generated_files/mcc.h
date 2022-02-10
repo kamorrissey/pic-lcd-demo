@@ -53,7 +53,7 @@
 #include <stdbool.h>
 #include <conio.h>
 #include "pwm1.h"
-#include "pwm2.h"
+#include "cwg.h"
 
 
 

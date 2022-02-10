@@ -104,8 +104,8 @@ void PWM1_Initialize(void)
      //PWM1TMRL 0; 
     PWM1TMRL = 0x00;
 
-     //MODE toggle_on_match; POL active_hi; OE enabled; EN disabled; 
-    PWM1CON = 0x48;
+     //MODE toggle_on_match; POL active_hi; OE disabled; EN disabled; 
+    PWM1CON = 0x08;
 
 }    
 

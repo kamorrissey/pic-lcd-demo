@@ -93,7 +93,7 @@ void PIN_MANAGER_Initialize(void)
     /**
     APFCONx registers
     */
-    APFCON = 0x03;
+    APFCON = 0x60;
 
 
 
